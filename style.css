@@ -84,6 +84,9 @@ form button[type="submit"]:hover,
 .recipe span{
     font-weight: 600;
 }
+.recipe-details{
+   display: none;
+}
 .recipe button {
     font-size: 20px;
     font-weight: 600;
