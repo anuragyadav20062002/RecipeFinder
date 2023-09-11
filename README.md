@@ -1,1 +1,2 @@
 # RecipeFinder
+A recipe finder website is an online platform that helps people discover and access a wide range of recipes. Users can search for specific recipes based on ingredients, dietary preferences, cooking time, or cuisine type. These websites provide detailed instructions, ingredient lists, and often include user reviews and ratings. Recipe finder websites make it easy for individuals to explore new dishes, plan meals, and cater to various tastes and dietary needs, simplifying the process of finding the perfect recipe for any occasion.
