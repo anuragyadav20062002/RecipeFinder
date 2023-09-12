@@ -26,7 +26,7 @@ recipeContainer.appendChild(recipeDiv);
 button.addEventListener('click' , () =>{
 
 openRecipePopup(meal);
-});
+}) ;
 recipeContainer.appendChild(recipeDiv);
 });
 }
