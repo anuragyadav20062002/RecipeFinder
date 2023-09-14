@@ -1,5 +1,7 @@
-const searchForm = document.querySelector('.search-form')
-const searchInput = document.querySelector('.search-input')
+// Variables
+
+const searchBox = document.querySelector('.searchBox');
+const searchBtn = document.querySelector('.searchBtn');
 const searchResult = document.querySelector('.search__result')
 const container = document.querySelector('.container')
 const searchIcon = document.querySelector('.search__icon')

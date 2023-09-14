@@ -1,17 +1,17 @@
-
+/* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Variables */
 :root {
-	--primary-color: pink;
-	--secondary-color: ;
+	--primary-color: #f96163;
+	--secondary-color: #f6f4fa;
 	--accent-color: #3c444c;
 	--white-color: #fff;
 }
 
 /* Base Styling */
 * {
-	margin : 0;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -23,6 +23,7 @@
 body {
 	font-family: 'Poppins', sans-serif;
 	color: var(--accent-color);
+    cursor: url(cursor.png) auto;
 }
 
 section {

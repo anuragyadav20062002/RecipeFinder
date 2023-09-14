@@ -5,31 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
+    <title>Nuti's Recipes</title>
     <link rel="stylesheet" href="es.css">
 </head>
-
+<style>
+    body{
+        background-image: url('pizza.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    }
+    </style>
 <body>
+    <header>
+        <nav>
     <section class="food__recipe">
         <div class="container">
             <h1 class="brand">
-                Recipe Finder
+                Nuti's Recipe
             </h1>
-            <form class="input__container search-form">
-                <input type="text" name="search" placeholder="Search for a recipe..." class="input search-input">
+            
                 
-                <ion-icon name="search-outline" class="search__icon"></ion-icon>
+                <form >
+                    <input type="text"
+                    placeholder="search for recipes..."
+                    class="searchBox" />
+                    <button type="submit" class="searchBtn">Search</button>
             </form>
+                     </nav>  
+                     
+                </header>
+            <img src="pizza.gif" alt="pizza">
+            </nav>
+            </header>
             <div class="search__result">
+                
+
                 
             </div>
         </div>
+        
     </section>
-
-    <script src="es.js"></script>
+    
+    <script src="./es.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    
 </body>
 
 </html>
