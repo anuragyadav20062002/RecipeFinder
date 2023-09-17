@@ -3,27 +3,28 @@
 
 /* Variables */
 :root {
-	--primary-color: #f96163;
-	--secondary-color: #f6f4fa;
+	--primary-color: black;
+	background-image: url(pizza.gif);
+    height: 50px;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 	--accent-color: #3c444c;
 	--white-color: #fff;
 }
 
-/* Base Styling */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* html {
-    font-size: 12px;
-} */
+
 
 body {
 	font-family: 'Poppins', sans-serif;
 	color: var(--accent-color);
-    cursor: url(cursor.png) auto;
 }
 
 section {
@@ -48,7 +49,7 @@ form input {
 
 a {
 	text-decoration: none;
-	/* color: inherit; */
+	
 }
 
 .container {
@@ -81,7 +82,7 @@ a {
 	width: 100%;
 	height: 100%;
 	padding: 0.5rem;
-	border-radius: 1rem;
+	
 	outline: none;
 	border: 1px solid var(--primary-color);
 	margin-bottom: 1rem;
@@ -99,8 +100,7 @@ a {
     transform: translateX(-100%);
     padding: 0.4rem;
     background-color: var(--primary-color);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    
     border: transparent;
     cursor: pointer;
 
@@ -118,7 +118,7 @@ a {
 .search__item {
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
+    
     background-color: var(--white-color);
     overflow: hidden;
     padding: 1rem;
@@ -138,15 +138,15 @@ a {
     color: var(--white-color);
     font-size: .7rem;
     padding: .5rem;
-    border-bottom-right-radius: .5rem;
-    border-top-left-radius: 1rem;
+    /* border-bottom-right-radius: .5rem;
+    border-top-left-radius: 1rem; */
 }
 
-.time__icon {
+/* .time__icon {
     font-size: .9rem;
     margin-bottom: .15rem;
     color: var(--primary-color);
-}
+} */
 
 .calories__icon, .meal__type-icon {
     font-size: 1.1rem;
@@ -157,7 +157,7 @@ a {
 .search__item-img {
     width: 100%;
     height: 200px;
-    border-radius: 1rem;
+    
 }
 
 .flex__container, .calories, .meal__type {
@@ -177,8 +177,8 @@ a {
 .btn {
     color: var(--white-color);
     background-color: var(--primary-color);
-    padding: .4rem .8rem;
-    border-radius: 1rem;
+    /* padding: .4rem .8rem; */
+    /* border-radius: 1rem; */
 }
 
 .search__item-data, .search__item-nationality {
@@ -193,7 +193,7 @@ a {
     justify-content: flex-start;
 }
 
-/* ScrollBar */
+
 ::-webkit-scrollbar {
     width: 10px;
     background-color: var(--white-color);
@@ -202,11 +202,11 @@ a {
 
 ::-webkit-scrollbar-thumb {
     background-color: rgba(60, 68, 76, .3);
-    border-radius: 10px;
+    
 }
 
 
-/* Error Display */
+
 .error__container {
     width: 100%;
     height: 100%;
@@ -227,6 +227,10 @@ a {
     align-items: center;
     justify-content: center;
 
+}
+body{
+    cursor: url(cursor.png), auto;
+    
 }
 
 .error__img {

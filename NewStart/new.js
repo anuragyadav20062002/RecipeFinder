@@ -31,13 +31,13 @@ const generateHTML = (hits) => {
 	}
 
 	hits.map((hit) => {
-		html += `
-            <div class="search__item">
+		 html += `
+             <div class="search__item">
             <div class="rating">
-                <ion-icon name="hourglass-outline" class="time__icon"></ion-icon>
-                <span class="duration">
-                    ${hit.recipe.totalTime}
-                    <span class="duration-string">m</span>
+               
+               
+                    
+                    
                 </span>
             </div>
             <img src="${hit.recipe.image}" alt="" class="search__item-img">

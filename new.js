@@ -1,21 +1,21 @@
-// Variables
 
-const searchBox = document.querySelector('.searchBox');
-const searchBtn = document.querySelector('.searchBtn');
+
+const searchForm = document.querySelector('.search-form')
+const searchInput = document.querySelector('.search-input')
 const searchResult = document.querySelector('.search__result')
 const container = document.querySelector('.container')
 const searchIcon = document.querySelector('.search__icon')
-// Stores app ID and app key
+
 const APP_ID = '2343a8e9'
 const APP_KEY = '570fa7f53e979dd545cf1eac36c8aed9'
 
-// Stores the search input value
+
 let searchValue = ''
 
-// Functions
+
 const generateHTML = (hits) => {
 	let html = ''
-	// Display error message if no results are found
+	
 	if (hits.length === 0) {
 		html += `
         <div class="error__container">
@@ -31,13 +31,13 @@ const generateHTML = (hits) => {
 	}
 
 	hits.map((hit) => {
-		html += `
-            <div class="search__item">
+		 html += `
+             <div class="search__item">
             <div class="rating">
-                <ion-icon name="hourglass-outline" class="time__icon"></ion-icon>
-                <span class="duration">
-                    ${hit.recipe.totalTime}
-                    <span class="duration-string">m</span>
+               
+               
+                    
+                    
                 </span>
             </div>
             <img src="${hit.recipe.image}" alt="" class="search__item-img">
@@ -72,11 +72,11 @@ const generateHTML = (hits) => {
 	searchResult.innerHTML = html
 }
 
-// Using async await because we are fetching API data
+
 const fetchAPI = async () => {
 	const baseURL = `https://api.edamam.com/search?q=${searchValue}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`
 	const response = await fetch(baseURL)
-	const data = await response.json() // Convert the data to JSON
+	const data = await response.json() 
 	generateHTML(data.hits)
 	console.log(data)
 }
@@ -88,7 +88,7 @@ const search = (e) => {
 	fetchAPI()
 }
 
-// Event Listeners
+
 
 searchForm.addEventListener('submit', search)
 searchIcon.addEventListener('click', search)
