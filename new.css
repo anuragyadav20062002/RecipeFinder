@@ -1,26 +1,258 @@
-/* Import Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Variables */
 :root {
-	--primary-color: black;
-	background-image: url(pizza.gif);
+	background-color: rgb(208, 75, 75);
+	background-image: url(https://media1.tenor.com/m/QZwwxTP6mwMAAAAC/vegan-veganz.gif); 
     height: 50px;
+    
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
-	--accent-color: #3c444c;
-	--white-color: #fff;
+	/* --accent-color: #5c302257; */
+	/* --white-color: #ffffffba; */
+}
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6c757d;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.navbar .home-btn {
+    margin-left: 10px; /* Add space between buttons */
+}
+
+.navbar .user-btn {
+    margin-left: 10px; /* Add space between buttons */
+}
+
+.footer {
+    background-color: #343a40; /* Background color for the footer */
+    color:#343a40;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons button {
+    margin: 0 10px; /* Spacing around buttons */
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit; /* Inherit default color for icons */
+    transition: color 0.3s; /* Smooth transition */
+    font-size: 24px;
+}
+
+.social-icons button:hover {
+    color: #555; /* Hover color */
 }
 
 
+/* Recipe cards */
+.recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.recipe-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.recipe-card p {
+    margin-bottom: 30px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons button {
+    margin: 0 10px; /* Spacing around buttons */
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit; /* Inherit default color for icons */
+    transition: color 0.3s; /* Smooth transition */
+    font-size: 24px;
+}
+
+.social-icons button:hover {
+    color: #555; /* Hover color */
+}
+
+
+/* Social Icons */
+/* .social-icons {
+    position: absolute;
+    top: 300px;
+    margin-left: -15vw;
+    bottom: px;
+    
+}
+
+.social-icons button {
+
+    margin-right: 4px;
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #555; /* Default color for icons */
+    /* transition: color 0.3s; /* Smooth transition */
+    /* font-size: 28px; */ */
+/* } */
+
+/* .social-icons button:hover { */
+    /* color: #007bff; Color on hover */
+/* } */
+/* Custom CSS for social icons footer */
+
+/* Custom CSS for social icons footer */
+/* .social-icons {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 100%; */
+    /* background-color: #f0f0f0; Background color for the footer */
+    /* padding: 10px 0; Padding for spacing */
+    /* z-index: 1000; Ensure it stays above other content */
+/* }
+
+.social-icons button {
+    margin: 0 10px; Spacing around buttons */
+    /* padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit; /* Inherit default color for icons */
+    /* transition: color 0.3s; /* Smooth transition */
+    /* font-size: 24px;
+} */ */
+
+/* .social-icons button:hover {
+    color: #555; /* Hover color */
+/* } */ */ */
+
+
+/* Button Styles */
+/* .button {
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-facebook {
+    color: #3b5998; /* Facebook color */
+/* } */
+
+/* .button-twitter {
+    color: #1da1f2; 
+}
+
+.button-email {
+    color: #dc3545; 
+} */ */
+
+.box{
+    transition-property:all;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(121, 75, 75);
+    color-scheme:calc();
+    animation-name: animatecolor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+ .box:hover{
+background-color: aqua;
+ }
+   @keyframes animatecolor{
+    from{ background-color: rgb(95, 37, 37) ;
+        
+    }
+    to{background-color:palevioletred;}
+}
+ 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 body {
 	font-family: 'Poppins', sans-serif;
@@ -57,6 +289,10 @@ a {
 	height: auto;
 	max-width: 1200px;
 	margin: 0 auto;
+    
+    /* animation-name: animatecolor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
 }
 
 /* Search Area */
@@ -65,7 +301,8 @@ a {
 	text-align: center;
 	font-size: 3rem;
 	margin-bottom: 2rem;
-	color: var(--primary-color);
+	color: black;
+    
 }
 
 .input__container {
@@ -84,7 +321,7 @@ a {
 	padding: 0.5rem;
 	
 	outline: none;
-	border: 1px solid var(--primary-color);
+	border: 1px solid var(--accent-color);
 	margin-bottom: 1rem;
 	display: inline-block;
     position: relative;
@@ -94,17 +331,29 @@ a {
 .search__icon {
     /* position: absolute; */
     /* right: 0; */
-    font-size: 1.5rem;
+    /* font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--white-color);
+    color: var(--black-color);
     transform: translateX(-100%);
     padding: 0.4rem;
     background-color: var(--primary-color);
     
     border: transparent;
-    cursor: pointer;
+    cursor: pointer; */
+   
+        position: absolute;
+        right: 33rem; /* Move the icon 1rem from the right */
+        font-size: 3rem; /* Make the icon bigger */
+        margin-bottom: 1rem;
+        color: var(--black-color);
+        transform: translateX(-100%);
+        padding: 0.4rem;
+        background-color: var(--primary-color);
+        border: transparent;
+        cursor: pointer;
+    }
+    
 
-}
 
 /* Search Results */
 .search__result {
@@ -119,7 +368,7 @@ a {
     width: 100%;
     height: 100%;
     
-    background-color: var(--white-color);
+    background-color: var(--black-color);
     overflow: hidden;
     padding: 1rem;
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.1);
@@ -175,8 +424,8 @@ a {
 }
 
 .btn {
-    color: var(--white-color);
-    background-color: var(--primary-color);
+    color: white;
+    background-color:black;
     /* padding: .4rem .8rem; */
     /* border-radius: 1rem; */
 }

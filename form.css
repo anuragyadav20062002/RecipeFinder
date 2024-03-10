@@ -1,0 +1,32 @@
+.footer {
+    background-color: #f0f0f0; /* Background color for the footer */
+    color: #555;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons button {
+    margin: 0 10px; /* Spacing around buttons */
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit; /* Inherit default color for icons */
+    transition: color 0.3s; /* Smooth transition */
+    font-size: 24px;
+}
+
+.social-icons button:hover {
+    color: #555; /* Hover color */
+}
