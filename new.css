@@ -1,26 +1,42 @@
-/* Import Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Variables */
 :root {
-	--primary-color: black;
-	background-image: url(pizza.gif);
+	background-color: rgb(208, 75, 75);
+	background-image: url(https://media1.tenor.com/m/QZwwxTP6mwMAAAAC/vegan-veganz.gif); 
     height: 50px;
+    
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
-	--accent-color: #3c444c;
-	--white-color: #fff;
+	/* --accent-color: #5c302257; */
+	/* --white-color: #ffffffba; */
 }
-
-
+.box{
+    transition-property:all;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(121, 75, 75);
+    color-scheme:calc();
+    animation-name: animatecolor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+ .box:hover{
+background-color: aqua;
+ }
+   @keyframes animatecolor{
+    from{ background-color: rgb(95, 37, 37) ;
+        
+    }
+    to{background-color:palevioletred;}
+}
+ 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 body {
 	font-family: 'Poppins', sans-serif;
@@ -57,6 +73,10 @@ a {
 	height: auto;
 	max-width: 1200px;
 	margin: 0 auto;
+    
+    /* animation-name: animatecolor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
 }
 
 /* Search Area */
@@ -65,7 +85,8 @@ a {
 	text-align: center;
 	font-size: 3rem;
 	margin-bottom: 2rem;
-	color: var(--primary-color);
+	color: black;
+    
 }
 
 .input__container {
@@ -84,7 +105,7 @@ a {
 	padding: 0.5rem;
 	
 	outline: none;
-	border: 1px solid var(--primary-color);
+	border: 1px solid var(--accent-color);
 	margin-bottom: 1rem;
 	display: inline-block;
     position: relative;
@@ -96,7 +117,7 @@ a {
     /* right: 0; */
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--white-color);
+    color: var(--black-color);
     transform: translateX(-100%);
     padding: 0.4rem;
     background-color: var(--primary-color);
@@ -119,7 +140,7 @@ a {
     width: 100%;
     height: 100%;
     
-    background-color: var(--white-color);
+    background-color: var(--black-color);
     overflow: hidden;
     padding: 1rem;
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.1);
@@ -175,8 +196,8 @@ a {
 }
 
 .btn {
-    color: var(--white-color);
-    background-color: var(--primary-color);
+    color: white;
+    background-color:black;
     /* padding: .4rem .8rem; */
     /* border-radius: 1rem; */
 }
