@@ -10,19 +10,120 @@
         crossorigin="anonymous"  />
     <link rel="stylesheet" href="new.css">
 </head>
+<style>
+    /* Style for the Google Translate element */
+    #google_translate_element {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        
+        border-radius: 50%; /* Makes it circle shape */
+        overflow: hidden; /* Ensures the circle shape */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
+    /* Style for the inner iframe */
+    #google_translate_element iframe {
+        border-radius: 50%; /* Ensures iframe is also circle */
+    }
+</style>
+
+
+</head>
 <body>
+    
+    <nav class="navbar">
+        <a href="form.html" class="user-btn"><i class="fas fa-user"></i> User</a>
+        <a href="#" class="home-btn"><i class="fas fa-home"></i> Home</a>
+    </nav>
+
     <section class="food__recipe">
         <div class="container">
             <h1 class="brand">
                 Recipe Finder 
             </h1>
-            <form class="input__container search-form">
+            <!-- <form class="input__container search-form">
                 <input type="text" name="search" placeholder="Search for a recipe..." class="input search-input">
                 
                 <ion-icon name="search-outline" class="search__icon"></ion-icon>
+            </form> -->
+            <form class="input__container search-form">
+                <input type="text" name="search" id="search" placeholder="Search for a recipe..." class="input search-input">
+                <button type="button" id="speechButton">Speak</button>
+                <!-- <button type="button" id="translateButton">Translate</button> -->
+                <div id="translatedText"></div>
+                <ion-icon name="search-outline" class="search__icon"></ion-icon>
             </form>
+            
             <div class="search__result">
+                <div id="searchResults">
+                    <!-- Recipe Card 1 -->
+                    <div class="recipe-card">
+                        <!-- <h3>Pasta Carbonara</h3>
+                        <p class="recipe-description">Description: Delicious pasta with bacon and eggs.</p> -->
+                        <footer class="footer">
+                        <div class="social-icons">
+                            <button class="button button-facebook" onclick="shareOnFacebook('Pasta Carbonara')">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="button button-twitter" onclick="shareOnTwitter('Pasta Carbonara')">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="button button-email" onclick="shareViaEmail('Pasta Carbonara')">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </div>
+                        </footer>
+                    </div>
+                    <!-- <h1>Recipe Form</h1> -->
+    <!-- <form id="recipeForm" onsubmit="saveFormData(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="favoriteRecipe">Favorite Recipe:</label><br>
+        <textarea id="favoriteRecipe" name="favoriteRecipe" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form> -->
+    <!-- <iframe src="https://forms.visme.co/formsBuilder/L0Era3ZwT3gwanY4QkwyYlp5WGE4Zz09OjpEVmtaTXk0Skh1TWhsdjFKbnFIRkJRPT0=" width="100%" height="800" frameborder="0" allowfullscreen></iframe> -->
+
+    <script>
+        function saveFormData(event) {
+            event.preventDefault();
+
+            const formData = new FormData(document.getElementById('recipeForm'));
+            const userData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                favoriteRecipe: formData.get('favoriteRecipe'),
+                history: []
+            };
+
+            // Save to local storage
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push(userData);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert('Form submitted successfully!');
+            window.location.href = 'nextpg.html'; // Redirect to next page
+        }
+    </script>
+     <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <div id="google_translate_element"></div>
+      
+                    
+                    <!-- <a href="nextpg.html">Go to Next Page</a> -->
+                </div>
                 
             </div>
         </div>
@@ -34,7 +135,16 @@
     <script src="new.js"></script> 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Fetch and insert the form
+        async function loadForm() {
+            const response = await fetch("https://forms.visme.co/formsBuilder/L0Era3ZwT3gwanY4QkwyYlp5WGE4Zz09OjpEVmtaTXk0Skh1TWhsdjFKbnFIRkJRPT0=");
+            const formHtml = await response.text();
+            document.getElementById("formContainer").innerHTML = formHtml;
+        }
 
+        loadForm();
+    </script>
 </body>
 
 </html>

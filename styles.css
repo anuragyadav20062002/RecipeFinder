@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Fallback color if the image is not available */
+    background-image: url('https://img.freepik.com/free-photo/fresh-colourful-ingredients-mexican-cuisine_23-2148254294.jpg?w=1060&t=st=1709238785~exp=1709239385~hmac=afb1e1a5aa7bc82620a7a7458d34f0ca7ce9fe9dcb221c19e4d15ce97cb3b548'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.footer {
+    background-color: black; /* Background color for the footer */
+    color: #555;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons button {
+    margin: 0 10px; /* Spacing around buttons */
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit; /* Inherit default color for icons */
+    transition: color 0.3s; /* Smooth transition */
+    font-size: 24px;
+}
+
+.social-icons button:hover {
+    color: #555; /* Hover color */
+}
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6c757d;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 26px; /* Adjusted padding */
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.navbar .home-btn {
+    margin-right: 5px; /* Adjusted margin */
+}
+
+.navbar .user-btn {
+    margin-left: 5px; /* Adjusted margin */
+}
+
+.footer {
+    background-color: #f0f0f0; /* Background color for the footer */
+    color: #555;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons button {
+    margin: 0 10px; /* Spacing around buttons */
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit; /* Inherit default color for icons */
+    transition: color 0.3s; /* Smooth transition */
+    font-size: 24px;
+}
+
+.social-icons button:hover {
+    color: #555; /* Hover color */
+}

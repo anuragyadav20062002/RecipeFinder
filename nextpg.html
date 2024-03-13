@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+</head>
+
+<body>
+    <h1>User Information</h1>
+    <div id="userInfo"></div>
+
+    <div id="favoriteRecipes"></div>
+
+    <div id="searchHistory"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const users = JSON.parse(localStorage.getItem('users'));
+            const userInfoContainer = document.getElementById('userInfo');
+
+            if (users && users.length > 0) {
+                const currentUser = users[users.length - 1]; // Get the latest user
+                userInfoContainer.innerHTML = `
+                    <p><strong>Name:</strong> ${currentUser.name}</p>
+                    <p><strong>Email:</strong> ${currentUser.email}</p>
+                    <p><strong>Favorite Recipe:</strong></p>
+                    <p>${currentUser.favoriteRecipe}</p>
+                `;
+            } else {
+                userInfoContainer.innerHTML = '<p>No user information found.</p>';
+            }
+
+            // Display favorite recipes
+            displayFavoriteRecipes();
+
+            // Display search history
+            displaySearchHistory();
+        });
+    </script>
+</body>
+
+</html>

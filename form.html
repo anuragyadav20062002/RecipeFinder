@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom CSS for button positioning */
+        .form-container {
+            position: relative;
+        }
+
+        #submitButton {
+            float: left;
+        }
+
+        /* #nextButton {
+            position: absolute;
+            right: 0;
+            top: 0;
+        } */
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="social-icons">
+            <button class="button button-facebook" onclick="shareOnFacebook('Pasta Carbonara')">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button class="button button-twitter" onclick="shareOnTwitter('Pasta Carbonara')">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="button button-email" onclick="shareViaEmail('Pasta Carbonara')">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+        </footer>
+    <nav class="navbar">
+        <!-- <a href="new.html" class="home-btn"><i class="fas fa-home"></i> Home</a> -->
+        <a href="#" class="user-btn"><i class="fas fa-user"></i> User</a>
+        <a href="new.html" class="home-btn"><i class="fas fa-home"></i> Home</a>
+    </nav>
+    <footer class="footer">
+        <div class="social-icons">
+            <button class="button button-facebook" onclick="shareOnFacebook('Pasta Carbonara')">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button class="button button-twitter" onclick="shareOnTwitter('Pasta Carbonara')">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="button button-email" onclick="shareViaEmail('Pasta Carbonara')">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+    </footer>
+    <div class="form-container">
+        <h2>Recipe Form</h2>
+        <form id="recipeForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="favoriteRecipe">Favorite Recipe:</label><br>
+            <textarea id="favoriteRecipe" name="favoriteRecipe" required></textarea><br><br>
+
+            <input type="submit" id="submitButton" value="Submit">
+
+            <!-- Button to go to new.html -->
+            <!-- <button id="nextButton" type="button">Next</button> -->
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
